@@ -1,0 +1,40 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        width: 70vw;
+        min-height: 50vh;
+        padding: 20px;
+        background-color: var(--amethyst);
+        box-shadow: 0 0 10px 5px rgba($color: #000000, $alpha: .2);
+        img {
+            margin-top: 20px;
+            display: flex;
+            border-radius: 100px;
+            object-fit: cover;
+            box-shadow: 0 0 10px 5px rgba($color: #000000, $alpha: .4);
+            transition: .3s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.2);
+            transition: .3s ease-in-out;
+        }
+        h1 {
+            font-size: 30px;
+            margin: 0;
+            padding: 20px 10px;
+        }
+        h2 {
+            font-size: 20px;
+            padding: 10px 10px;
+            margin: 0;
+        }
+    }
+}

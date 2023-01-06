@@ -1,0 +1,200 @@
+@keyframes spin { 
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+}
+
+@keyframes hamburgerFadeIn {
+    from {
+        left: -40%;
+        top: 2%;
+        opacity: 0;
+    }
+    to {
+        left: 5%;
+        top: 2%;
+        opacity: 1;
+    }
+}
+
+@keyframes hamburgerFadeOut {
+    from {
+        left: 5%;
+        opacity: 1;
+    }
+    to {
+        left: -40%;
+        opacity: 0;
+    }
+}
+
+#preload {
+    animation: 0s !important;
+}
+
+.container {
+    display: flex;
+    width: auto;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 4rem;
+    z-index: 1;
+    animation-duration: 0s !important;
+}
+
+.navigationClosed {
+    position: absolute;
+    left: -60%;
+    z-index: 998;
+    background: linear-gradient(180deg, #e2cfeaff 0%, #6247aaff 100%);
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s ease-in;
+}
+
+.navigation {
+    position: absolute;
+    left: 0%;
+    z-index: 998;
+    background: linear-gradient(180deg, #e2cfeaff 0%, #6247aaff 100%);
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s ease-in;
+    z-index: 1000;
+}
+
+.hamburgerIconClosed {
+    position: absolute;
+    left: -5%;
+    top: 2%;
+    cursor: pointer;
+    width: 25px;
+    display: block;
+    z-index: 998;
+    animation: hamburgerFadeOut .5s ease-in;
+}
+
+.hamburgerIconClosed span {
+    height: 8px;
+    width: 30px;
+    display: block;
+    border-bottom: 2px solid white;
+    transition: .15s ease-in;
+}
+
+.hamburgerIconClosed:hover span {
+    transition: .15s ease-in;
+    border-bottom: 2px solid #5E1FD1;
+}
+
+.hamburgerIcon {
+    position: absolute;
+    left: 5%;
+    top: 2%;
+    cursor: pointer;
+    width: 25px;
+    display: block;
+    animation: hamburgerFadeIn .5s ease-in;
+}
+
+.hamburgerIcon span {
+    height: 8px;
+    width: 30px;
+    display: block;
+    border-bottom: 2px solid white;
+    transition: .15s ease-in;
+    margin: 0;
+}
+
+.hamburgerIcon:hover span {
+    transition: .15s ease-in;
+    border-bottom: 2px solid var(--purple);
+}
+
+.closeBtn {
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    left: 80%;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .15s ease-in;
+}
+
+.closeBtn:hover {
+    cursor: pointer;
+    color: #B388EB;
+    transition: .3s ease-in;
+}
+
+.linkContainer {
+    padding: 20px 8px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .socials {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        padding: 8px;
+        margin-top: auto;
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.linkContainer h1 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 64px;
+    transition: .5s ease-in;
+    margin: 0;
+}
+
+.linkContainer h1:hover {
+    color: var(--blue);
+    transition: .25s ease-in;
+}
+
+.linkContainer h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 0;
+    padding: 8px;
+    font-size: 48px;
+    transition: .5s ease-in;
+    color: var(--blue);
+}
+
+.linkContainer a {
+    text-decoration: none !important;
+}
+
+.linkContainer h3:hover {
+    color: var(--purple);
+    transition: .25s ease-in;
+}
