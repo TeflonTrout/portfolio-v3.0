@@ -15,8 +15,12 @@
   width: 80vw;
   min-height: 200px;
   background-color: var(--amethyst);
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
-  padding: 20px;
+  padding: 30px 15px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .projectCard .heading {
@@ -30,6 +34,37 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.projectCard .heading a {
+  width: 300px;
+}
+
+.projectCard .heading a img {
+  width: 50%;
+  aspect-ratio: 16 / 9;
+  margin: 0px;
+  min-width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.projectCard .heading a img:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.projectCard .heading h1 {
+  text-align: right;
 }
 
 .projectCard .techStack {
@@ -46,6 +81,10 @@
           align-items: center;
 }
 
+.projectCard .techStack h4 {
+  font-size: 20px;
+}
+
 .projectCard .description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,5 +97,20 @@
       -ms-flex-align: start;
           align-items: flex-start;
   text-align: left;
+}
+
+.projectCard .buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  gap: 20px;
+  margin-top: 20px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=ProjectCard.module.css.map */
