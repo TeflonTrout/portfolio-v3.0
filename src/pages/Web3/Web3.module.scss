@@ -1,0 +1,35 @@
+.web3Page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 80vh;
+    margin-top: 20px;
+    .hero {
+        background-color: var(--amethyst);
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 30vh;
+        padding: 20px;
+        border-radius: 20px;
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 80%;
+            margin: 20px 0 20px 0;
+        }
+        p {
+            display: flex;
+            width: 80%;
+            text-align: justify;
+            font-size: 24px;
+        }
+        .mintBtn {
+            margin-top: auto;
+        }
+    }
+}
