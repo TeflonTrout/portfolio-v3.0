@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: var(--dark-jungle-green);
     border-radius: 15px;
     padding: 10px 15px;
@@ -15,6 +16,14 @@
         align-items: center;
         color: white;
         text-decoration: none;
+    }
+    p {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 20px;
     }
 }
 
