@@ -60,7 +60,7 @@
 }
 
 .navigation {
-    position: absolute;
+    position: fixed;
     left: 0%;
     z-index: 998;
     background: linear-gradient(180deg, #e2cfeaff 0%, #6247aaff 100%);
@@ -99,7 +99,7 @@
 }
 
 .hamburgerIcon {
-    position: absolute;
+    position: fixed;
     left: 5%;
     top: 2%;
     cursor: pointer;
@@ -152,6 +152,7 @@
     align-items: flex-start;
     .socials {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         width: 70%;
@@ -159,6 +160,26 @@
         margin-top: auto;
         a {
             text-decoration: none;
+            text-align: left;
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+        }
+        h3 {
+            padding: 8px;
+            padding-bottom: 20px;
+            padding-left: 0;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .icons {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 }
@@ -197,4 +218,16 @@
 .linkContainer h3:hover {
     color: var(--purple);
     transition: .25s ease-in;
+}
+
+.linkContainer .faIcon {
+    transition: .4s ease-in-out;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.linkContainer .faIcon:hover {
+    transition: .15s ease-in-out;
+    transform: scale(1.3);
+    color: var(--blue);
 }

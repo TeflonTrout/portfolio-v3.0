@@ -38,7 +38,7 @@ const Projects = () => {
           ]}
         />
         <ProjectCard 
-          title="Movie Watchlist" 
+          title="Movie Wishlist" 
           img="movieWishlist.png" 
           link="https://tdi-wishlist.netlify.app/"
           stack={["React", "CSS", "Node.js", "Express.js", "MongoDB", "Git"]}
