@@ -108,8 +108,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: 0.5s ease-in;
-  transition: 0.5s ease-in;
+  -webkit-transition: 0.35s ease-in;
+  transition: 0.35s ease-in;
 }
 
 .navigation {
@@ -132,8 +132,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: 0.5s ease-in;
-  transition: 0.5s ease-in;
+  -webkit-transition: 0.35s ease-in;
+  transition: 0.35s ease-in;
   z-index: 1000;
 }
 
@@ -145,8 +145,8 @@
   width: 25px;
   display: block;
   z-index: 998;
-  -webkit-animation: hamburgerFadeOut .5s ease-in;
-          animation: hamburgerFadeOut .5s ease-in;
+  -webkit-animation: hamburgerFadeOut .35s ease-in;
+          animation: hamburgerFadeOut .35s ease-in;
 }
 
 .hamburgerIconClosed span {
@@ -318,8 +318,8 @@
 
 .linkContainer h1:hover {
   color: var(--blue);
-  -webkit-transition: .25s ease-in;
-  transition: .25s ease-in;
+  -webkit-transition: .35s ease-in;
+  transition: .35s ease-in;
 }
 
 .linkContainer h3 {
@@ -347,8 +347,8 @@
 
 .linkContainer h3:hover {
   color: var(--purple);
-  -webkit-transition: .25s ease-in;
-  transition: .25s ease-in;
+  -webkit-transition: .35s ease-in;
+  transition: .35s ease-in;
 }
 
 .linkContainer .faIcon {

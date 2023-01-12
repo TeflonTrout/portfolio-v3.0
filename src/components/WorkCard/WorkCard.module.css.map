@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "WorkCard.module.scss"
+    ],
+    "names": [],
+    "file": "WorkCard.module.css"
+}
