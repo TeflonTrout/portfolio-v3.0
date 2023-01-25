@@ -1,20 +1,23 @@
 import { useState } from "react";
 import styles from "./Web3.module.css"
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { useAccount, useContractRead } from "wagmi";
+import { useAccount, useContractRead, usePrepareContractWrite, useContractWrite, useWaitForTransaction } from "wagmi";
 import { Button } from "../../components";
 import { CONTRACT_ABI } from "../../utils/soulboundToken";
 import { ethers } from "ethers";
 
 const Web3 = () => {
   const [tokenGateOpen, setTokenGateOpen] = useState<boolean>(false);
+  const [hash, setHash] = useState<`0x${string}`>("0x");
   const { address } = useAccount();
-  useContractRead({
-    address: '0x6849B467Aa19718798469d7F29b4e1a9172eF549',
+
+  const { refetch } = useContractRead({
+    address: '0xD3a58333391f019f2cB1f3e91d9c0Fb558dA538E',
     abi: CONTRACT_ABI,
     functionName: 'balanceOf',
     args: [address],
     onSuccess(data:any) {
+      console.log("Checking isOwner")
       const isSoulboundOwner:number = ethers.BigNumber.from(data).toNumber()
       if(isSoulboundOwner === 1) {
         setTokenGateOpen(true);
@@ -23,6 +26,35 @@ const Web3 = () => {
       }
     }
   })
+
+  const { config } = usePrepareContractWrite({
+    address: '0xD3a58333391f019f2cB1f3e91d9c0Fb558dA538E',
+    abi: CONTRACT_ABI,
+    functionName: 'safeMint',
+    args: [address, ""],
+    onError(error){
+      console.log(error)
+    }
+  })
+  const { write } = useContractWrite({
+    ...config,
+    onSuccess(data){
+      refetch?.()
+      setHash(data?.hash)
+    }
+  })
+
+  useWaitForTransaction({
+    hash: hash,
+    onSuccess(){
+      console.log("Hash successful, refetching isOwner")
+      refetch?.()
+    }
+  })
+
+  const mintToken = () => {
+    write?.()
+  }
 
   return (
     <div className={styles.web3Page}>
@@ -41,7 +73,7 @@ const Web3 = () => {
         <div className={styles.mintBtn}>
           {tokenGateOpen === false 
             ? <div className={styles.buttonContainer}>
-                <Button text="Mint" />
+                <div onClick={() => mintToken()}><Button text="Mint" /></div>
                 <Button text="Faucet" link="https://goerlifaucet.com/" external={true}/>
             </div> : null}
             <div className={styles.tokenGated}>
