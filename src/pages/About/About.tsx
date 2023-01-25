@@ -1,8 +1,13 @@
-import React from 'react'
+import styles from "./About.module.css"
 
 const About = () => {
   return (
-    <div>About</div>
+    <div className={styles.aboutPage}>
+      <h1>My Previous Work</h1>
+      <div className={styles.workCard}>
+        
+      </div>
+    </div>
   )
 }
 

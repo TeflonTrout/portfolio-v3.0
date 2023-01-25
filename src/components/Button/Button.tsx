@@ -13,7 +13,7 @@ const Button = (props: ButtonProps) => {
         {props.link && props.external === false
         ? <Link to={props.link}><p>{props.text}</p></Link>
         : props.link && props.external === true
-          ? <a href={props.link} target="_blank" rel="noreferrer">{props.text}</a>
+          ? <a href={props.link} target="_blank" rel="noreferrer"><p>{props.text}</p></a>
           : <p>{props.text}</p>}
     </div>
   )

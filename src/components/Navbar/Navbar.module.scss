@@ -56,7 +56,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: 0.5s ease-in;
+    transition: 0.35s ease-in;
 }
 
 .navigation {
@@ -70,7 +70,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: 0.5s ease-in;
+    transition: 0.35s ease-in;
     z-index: 1000;
 }
 
@@ -82,7 +82,7 @@
     width: 25px;
     display: block;
     z-index: 998;
-    animation: hamburgerFadeOut .5s ease-in;
+    animation: hamburgerFadeOut .35s ease-in;
 }
 
 .hamburgerIconClosed span {
@@ -196,7 +196,7 @@
 
 .linkContainer h1:hover {
     color: var(--blue);
-    transition: .25s ease-in;
+    transition: .35s ease-in;
 }
 
 .linkContainer h3 {
@@ -217,7 +217,7 @@
 
 .linkContainer h3:hover {
     color: var(--purple);
-    transition: .25s ease-in;
+    transition: .35s ease-in;
 }
 
 .linkContainer .faIcon {

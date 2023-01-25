@@ -52,7 +52,7 @@ const Navbar = () => {
           <Link to="/projects" onClick={() => setIsOpen(false)}>
             <h3>Projects</h3>
           </Link>
-          <Link to="/dapps" onClick={() => setIsOpen(false)}>
+          <Link to="/web3" onClick={() => setIsOpen(false)}>
             <h3>Web3 XP</h3>
           </Link>
           <div className={styles.socials}>
