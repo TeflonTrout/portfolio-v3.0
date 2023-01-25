@@ -36,5 +36,20 @@
             padding: 10px 10px;
             margin: 0;
         }
+        .buttonContainer {
+            margin-top: 20px;
+        }
     }
+}
+
+.profileSkeleton {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    background-color: #d4d4d4;
+    display: flex;
+    border-radius: 100px;
+    object-fit: cover;
+    box-shadow: 0 0 10px 5px rgba($color: #000000, $alpha: .4);
+    transition: .3s ease-in-out;
 }

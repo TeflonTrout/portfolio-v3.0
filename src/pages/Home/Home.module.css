@@ -66,4 +66,25 @@
   padding: 10px 10px;
   margin: 0;
 }
+
+.home .hero .buttonContainer {
+  margin-top: 20px;
+}
+
+.profileSkeleton {
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  background-color: #d4d4d4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
 /*# sourceMappingURL=Home.module.css.map */
