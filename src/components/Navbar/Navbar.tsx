@@ -4,7 +4,6 @@ import styles from "./Navbar.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faXmarkCircle, faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -55,10 +54,12 @@ const Navbar = () => {
           <Link to="/web3" onClick={() => setIsOpen(false)}>
             <h3>Web3 XP</h3>
           </Link>
+          <a href="./JT_Resume.pdf" target="_blank" rel='noreferrer'>
+            <h3>
+                Resume
+            </h3>
+          </a>
           <div className={styles.socials}>
-            <a href="/">
-              <h3>Resume&nbsp;<FontAwesomeIcon icon={faDownload} size="sm" color='#102b3fff'/></h3>
-            </a>
             <div className={styles.icons}>
               <a href="https://github.com/teflontrout" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faGithub} className={styles.faIcon} size="xl" color='white'/>
