@@ -58,7 +58,7 @@ const Web3 = () => {
 
   return (
     <div className={styles.web3Page}>
-      <h1>This Page is Still Under Construction!</h1>
+      <h1 className={styles.alert}>This Page is Still Under Construction!</h1>
       <div className={styles.hero}>
         <div className={styles.heading}>
           <h1>My Web3 XP</h1>
