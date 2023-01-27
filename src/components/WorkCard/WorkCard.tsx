@@ -29,7 +29,7 @@ const WorkCard = (props: WorkCardProps) => {
             <div style={isOpen 
                     ? {fontSize: "20px", marginLeft: "auto", marginRight: "20px", transition: "0.25s ease-in-out", transform: "rotate(180deg)"} 
                     : {fontSize: "20px", marginLeft: "auto", marginRight: "20px", transition: "0.25s ease-in-out"}}>
-                <FontAwesomeIcon className={styles.icon} icon={faCaretSquareDown} size="xl" /> 
+                <FontAwesomeIcon className={styles.icon} icon={faCaretSquareDown} size={window.innerWidth > 600 ? "xl" : "sm" } /> 
             </div>
         </div>
         <div className={styles.description} 
