@@ -2,17 +2,15 @@ import { useState, useRef, useEffect } from 'react'
 import { Link } from "react-router-dom"
 import styles from "./Navbar.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faTwitterSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faXmarkCircle, faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   function useOutsideAlerter(ref:any) {
     useEffect(() => {
-      /**
-       * Alert if clicked on outside of element
-       */
+      /** Alert if clicked on outside of element **/
       function handleClickOutside(event:any) {
         if (ref.current && !ref.current.contains(event.target)) {
           setIsOpen(false)
@@ -51,16 +49,26 @@ const Navbar = () => {
           <Link to="/projects" onClick={() => setIsOpen(false)}>
             <h3>Projects</h3>
           </Link>
-          <Link to="/dapps" onClick={() => setIsOpen(false)}>
+          <Link to="/web3" onClick={() => setIsOpen(false)}>
             <h3>Web3 XP</h3>
           </Link>
+          <a href="./JT_Resume.pdf" target="_blank" rel='noreferrer'>
+            <h3>
+                Resume
+            </h3>
+          </a>
           <div className={styles.socials}>
-            <a href="https://github.com/teflontrout" target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faGithub} size="xl" color='white'/></a>
-            <a href="https://linkedin.com/in/jtkazousky" target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faLinkedin} size="xl" color='white'/></a>
-            <a href="https://twitter.com/teflontrout_fpc" target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faTwitterSquare} size="xl" color='white'/></a>
+            <div className={styles.icons}>
+              <a href="https://github.com/teflontrout" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faGithub} className={styles.faIcon} size="xl" color='white'/>
+              </a>
+              <a href="https://linkedin.com/in/jtkazousky" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faLinkedin} className={styles.faIcon} size="xl" color='white'/>
+              </a>
+              <a href="mailto:jtkazo@gmail.com" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faEnvelope} className={styles.faIcon} size="xl" color='white'/>
+              </a>
+            </div>
           </div>
         </div>
       </div>

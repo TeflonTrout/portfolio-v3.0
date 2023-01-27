@@ -1,17 +1,20 @@
 import { Link } from "react-router-dom";
 import styles from "./Button.module.css"
 
-interface ButtonProps {
+export interface ButtonProps {
     text: string;
     link?: string;
+    external?: boolean;
 }
 
 const Button = (props: ButtonProps) => {
   return (
     <div className={styles.button}>
-        {props.link
+        {props.link && props.external === false
         ? <Link to={props.link}><p>{props.text}</p></Link>
-        : <p>{props.text}</p>}
+        : props.link && props.external === true
+          ? <a href={props.link} target="_blank" rel="noreferrer"><p>{props.text}</p></a>
+          : <p>{props.text}</p>}
     </div>
   )
 }
