@@ -1,27 +1,27 @@
 import styles from "./About.module.css"
-import { WorkCard } from "../../components"
+import { Button, WorkCard } from "../../components"
 
 const About = () => {
   return (
     <div className={styles.aboutPage}>
-      <h1>About</h1>
+      <h1>Previous Roles</h1>
       <div className={styles.workContainer}>
         <WorkCard 
           title="Founding Engineer" 
           company="JOYWORLD, Inc." 
-          date="June 2021 - Dec. 2022"
-          containerHeight="400"
+          date="June 2021 - Jan. 2023"
+          containerHeight="470"
           img="./joyworldLogo.jpg"
           location="Oswego, OR"
           description={[
-            "Developed user friendly Web3 Marketplace utilizing OpenSea API.",
-            "Utilize Fullstack development to create a fully functioning Web3 Application including frontend with Next.js and backend with Deno, AWS and MongoDB.",
-            "Design reusable functional components for ease of development.",
-            "Integrate Web3 Providers and Wallets to allow user transactions on Ethereum Network.",
-            "Created testnet Smart Contract and designed testing architecture using Rinkeby to brainstorm a fun way for users to purchase NFT's.",
-            "Managed Git workflow between multiple developers."]} />
+            "Designed, built and maintained Web3 NFT Marketplace platform using cutting-edge technologies such as Next.js, GraphQL, and Typescript.",
+            "Collaborated with the team to implement new features and improve existing ones, utilizing design tools such as Figma to bring ideas to life.",
+            "Conducted research and evaluated new technologies and tools to enhance platform functionality and user experience.",
+            "Demonstrated expertise in Web3 and blockchain technologies, particularly Ethereum, through the successful delivery of high-quality and scalable software products.",
+            "Showcased strong knowledge of smart contract development using Solidity and experience in integrating GraphQL API's.",
+            "Exhibited strong communication and collaboration skills, able to work effectively with both technical and non-technical stakeholders."]} />
         <WorkCard 
-          title="Web3 Engineer" 
+          title="Front-End Web3 Engineer" 
           company="Upstate Interactive" 
           date="June 2021 - Sept. 2022"
           containerHeight="300"
@@ -85,6 +85,9 @@ const About = () => {
                 <li>L2 Protocols</li>
               </ul>
             </div>
+          </div>
+          <div className={styles.buttonContainer}>
+            <Button text="See My Work" link="/projects" external={false} />
           </div>
         </div>
       </div>

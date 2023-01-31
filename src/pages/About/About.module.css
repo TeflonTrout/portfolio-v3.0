@@ -3,6 +3,9 @@
     -webkit-tap-highlight-color: transparent;
     padding-bottom: 20px;
   }
+  .aboutPage .techStack .buttonContainer {
+    margin: 10px;
+  }
   .aboutPage .techStack .techHero {
     width: 100%;
     border-radius: 20px;
@@ -109,6 +112,10 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+}
+
+.aboutPage .techStack .buttonContainer {
+  margin-top: 20px;
 }
 
 .aboutPage .techStack .techHero {
