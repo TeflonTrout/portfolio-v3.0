@@ -32,7 +32,7 @@ const WorkCard = (props: WorkCardProps) => {
                 <FontAwesomeIcon className={styles.icon} icon={faCaretSquareDown} size={window.innerWidth > 600 ? "xl" : "sm" } /> 
             </div>
         </div>
-        <div className={styles.description} 
+        <div className={isOpen ? styles.description : styles.closedDescription} 
             style={isOpen 
                 ? {transition: "0.25s ease-in", height: `${props.containerHeight}px`} 
                 : {transition: "0.25s ease-in", height: "0px", overflow: 'hidden'}}>

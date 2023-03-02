@@ -9,10 +9,10 @@ const About = () => {
         <WorkCard 
           title="Founding Engineer" 
           company="JOYWORLD, Inc." 
-          date="June 2021 - Dec. 2022"
+          date="June 2021 - Jan. 2022"
           containerHeight="400"
           img="./joyworldLogo.jpg"
-          location="Oswego, OR"
+          location="Oswego, OR (REMOTE)"
           description={[
             "Developed user friendly Web3 Marketplace utilizing OpenSea API.",
             "Utilize Fullstack development to create a fully functioning Web3 Application including frontend with Next.js and backend with Deno, AWS and MongoDB.",
@@ -21,19 +21,19 @@ const About = () => {
             "Created testnet Smart Contract and designed testing architecture using Rinkeby to brainstorm a fun way for users to purchase NFT's.",
             "Managed Git workflow between multiple developers."]} />
         <WorkCard 
-          title="Web3 Engineer" 
+          title="Web3 Frontend Engineer" 
           company="Upstate Interactive" 
           date="June 2021 - Sept. 2022"
           containerHeight="300"
           img="./upstateInteractiveLogo.png"
-          location="Syracuse, NY"
+          location="Syracuse, NY (REMOTE)"
           description={[
             "Create mobile optimized web pages from given wireframe designs.",
             "Utilize Web3 technology to connect web app to smart contract to enable Ethereum Network transactions.",
             "Apply functional components to application for mapping NFTs to dedicated components/pages.",
             "Leverage Web3, Ethereum, ERC-721 and Smart Contract knowledge to build functional applications."
           ]} />
-        <WorkCard 
+        {/* <WorkCard 
           title="Lead Loan Analyst" 
           company="PNC Bank" 
           date="Dec. 2018 - June 2021"
@@ -44,7 +44,7 @@ const About = () => {
             "Review applications and calculate loan criteria per underwriting guidelines.",
             "Adapt to procedural changes to maintain efficient work flow through corporate expansion.",
             "Assist in training new employees and ensuring knowledge of process and procedure."
-          ]} />
+          ]} /> */}
         <div className={styles.techStack}>
           <h1>Tech Stack</h1>
           <div className={styles.techHero}>

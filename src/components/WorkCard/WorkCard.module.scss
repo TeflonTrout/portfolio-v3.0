@@ -141,10 +141,10 @@
             display: flex;
             flex-direction: column;
             width: 90%;
+            margin: 20px;
             height: auto;
             align-items: flex-start;
             justify-content: flex-start;
-            margin: 20px;
             .techContainer {
                 display: flex;
                 flex-direction: column;
@@ -178,17 +178,53 @@
             }
         }
         .closedDescription {
-            transition: .25s max-height;
-            width: 80%;
-            display: none;
-            height: 0px;
-            transform: translateY(0);
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            height: auto;
+            align-items: flex-start;
+            justify-content: flex-start;
+            .techContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 100%;
+                .techStack {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    width: 100%;
+                    margin: 10px 0; 
+                    p {
+                        color: var(--lavender);
+                        margin: 0;
+                        padding: 0;
+                        text-align: center;
+                        width: auto;
+                    }
+                }
+            }
+            h4 {
+                font-size: 26px;
+                text-decoration: underline;
+            }
+            p {
+                text-align: left;
+                width: 100%;
+                margin: 10px 0;
+                font-size: 18px;
+            }
         }
         .active {
             transition: .5s ease-in;
             animation: spin .5s normal forwards ease-in;
             animation-iteration-count: 1;
         }
+    }
+    .workCard:hover {
+        transition: .25s ease-in-out;
+        background: var(--blue);
     }
 }
 

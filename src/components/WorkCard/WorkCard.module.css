@@ -232,6 +232,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     width: 90%;
+    margin: 20px;
     height: auto;
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -239,7 +240,6 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin: 20px;
   }
   .workCard .description .techContainer {
     display: -webkit-box;
@@ -288,13 +288,67 @@
     font-size: 18px;
   }
   .workCard .closedDescription {
-    -webkit-transition: .25s max-height;
-    transition: .25s max-height;
-    width: 80%;
-    display: none;
-    height: 0px;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+    height: auto;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .workCard .closedDescription .techContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .workCard .closedDescription .techContainer .techStack {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .workCard .closedDescription .techContainer .techStack p {
+    color: var(--lavender);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: auto;
+  }
+  .workCard .closedDescription h4 {
+    font-size: 26px;
+    text-decoration: underline;
+  }
+  .workCard .closedDescription p {
+    text-align: left;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 18px;
   }
   .workCard .active {
     -webkit-transition: .5s ease-in;
@@ -303,6 +357,11 @@
             animation: spin .5s normal forwards ease-in;
     -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
+  }
+  .workCard:hover {
+    -webkit-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    background: var(--blue);
   }
 }
 /*# sourceMappingURL=WorkCard.module.css.map */
